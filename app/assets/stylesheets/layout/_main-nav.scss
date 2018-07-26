@@ -1,0 +1,28 @@
+.main-nav {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: $spacing-default $spacing-large;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.main-nav__links {
+  flex-direction: row;
+  display: flex;
+}
+
+.main-nav__link {
+  color: $color-light-70;
+  font-size: $font-size-small;
+  font-weight: 200;
+  margin-left: $spacing-small;
+  transition: color $speed-fast;
+  text-decoration: none;
+
+  &:hover {
+    color: white;
+  }
+}

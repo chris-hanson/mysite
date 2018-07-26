@@ -1,0 +1,53 @@
+// Colours
+$color-body-bg:    #0C0C0C;
+$color-primary:    #222;
+$color-secondary:  #111;
+$color-text:       #9a9a9a;
+$color-headers:    white;
+
+$color-link:        darken($color-text, 20);
+$color-link-hover:  darken($color-text, 10);
+
+$color-gray-dark:   #222;
+$color-gray:        #666;
+$color-gray-light:  #989898;
+
+$color-light-90:    rgba(white, .9);
+$color-light-80:    rgba(white, .8);
+$color-light-70:    rgba(white, .7);
+$color-light-60:    rgba(white, .6);
+$color-light-50:    rgba(white, .5);
+$color-light-40:    rgba(white, .4);
+$color-light-30:    rgba(white, .3);
+$color-light-20:    rgba(white, .2);
+$color-light-10:    rgba(white, .1);
+
+$color-dark-90:     rgba(black, .9);
+$color-dark-80:     rgba(black, .8);
+$color-dark-70:     rgba(black, .7);
+$color-dark-60:     rgba(black, .6);
+$color-dark-50:     rgba(black, .5);
+$color-dark-40:     rgba(black, .4);
+$color-dark-30:     rgba(black, .3);
+$color-dark-20:     rgba(black, .2);
+$color-dark-10:     rgba(black, .1);
+
+// Layout
+$layout-max-width:   1024px;
+
+// Spacing
+$spacing-large:      3.5rem;
+$spacing-default:    2.5rem;
+$spacing-small:      1.5rem;
+$spacing-smaller:    1rem;
+$spacing-smallest:   .5rem;
+
+// Type
+
+$font-size-larger:    2.4rem;
+$font-size-large:     1.8rem;
+$font-size-default:   1.2rem;
+$font-size-small:     1rem;
+
+// Animations/ transitions
+$speed-fast:          .2s;

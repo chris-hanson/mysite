@@ -1,4 +1,7 @@
 class PortfoliosController < ApplicationController
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
+  before_action :set_portfolio_item, only: [:show, :edit, :update, :destroy]
+  layout 'portfolio'
 
   def index
     @portfolio_items = Portfolio.all
@@ -10,7 +13,6 @@ class PortfoliosController < ApplicationController
   end
 
   def show
-    @portfolio_item = Portfolio.find(params[:id])
   end
 
   def create
@@ -26,13 +28,9 @@ class PortfoliosController < ApplicationController
   end
 
   def edit
-    @portfolio_item = Portfolio.find(params[:id])
   end
 
   def update
-    @portfolio_item = Portfolio.find(params[:id])
-    @portfolio_item = Portfolio.find(params[:id])
-        @portfolio_item.destroy
     respond_to do |format|
       if @portfolio_item.update(params.require(:portfolio).permit(:title, :subtitle, :body))
         format.html { redirect_to portfolios_path, notice: 'Portfolio item created' }
@@ -43,12 +41,17 @@ class PortfoliosController < ApplicationController
   end
 
   def destroy
-    @portfolio_item = Portfolio.find(params[:id])
     @portfolio_item.destroy
 
     respond_to do |format|
       format.html { redirect_to portfolios_url, notice: 'Item deleted' }
     end
+  end
+
+  private
+
+  def set_portfolio_item
+    @portfolio_item = Portfolio.find(params[:id])
   end
 
 end
