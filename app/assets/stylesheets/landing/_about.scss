@@ -1,0 +1,64 @@
+.headshot {
+  margin-right: $spacing-large;
+  border: 4px dashed $color-light-10;
+  background: url(https://images.unsplash.com/photo-1523913507744-1970fd11e9ff?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bfb55e141136b2146956af380f8678ab&auto=format&fit=crop&w=634&q=80);
+  height: 100%;
+  background-size: cover;
+  background-position: 50%;
+
+  img {
+    width: 100%;
+    display: none;
+  }
+}
+
+.skill-list {
+  margin: 0;
+  margin-top: $spacing-large;
+  padding: 0;
+  letter-spacing: 1px;
+  font-size: $font-size-small;
+  text-transform: uppercase;
+
+  li {
+    margin: 0;
+    list-style: none;
+    color: white;
+    margin-bottom: $spacing-small;
+  }
+}
+
+.skill-bar {
+  height: 3px;
+  width: 100%;
+  background: $color-light-10;
+  margin-top: $spacing-smallest;
+}
+
+.skill-bar__inner {
+  height: 100%;
+  background: $color-light-80;
+  width: 0;
+}
+
+.services {
+  .icon {
+    font-size: 4.2rem;
+  }
+
+  .col-sm-4 {
+    padding: $spacing-small;
+    width: 100%;
+  }
+
+  h3 {
+    margin-bottom: $spacing-smallest;
+    letter-spacing: 1px;
+    font-weight: 400;
+  }
+
+  p {
+    margin-top: 0;
+    font-size: $font-size-small;
+  }
+}

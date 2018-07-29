@@ -1,0 +1,23 @@
+.main-footer {
+  background: $color-secondary;
+  padding: $spacing-large*2;
+  text-align: center;
+}
+
+.main-footer__name {
+  color: white;
+  letter-spacing: 1px;
+}
+
+.main-footer__social {
+  margin: $spacing-small 0;
+
+  a {
+    margin: 0 $spacing-smaller;
+    font-size: 1.5rem;
+  }
+}
+
+.main-footer__copy {
+  text-transform: uppercase;
+}

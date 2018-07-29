@@ -15,4 +15,4 @@
 //= require featherlight
 //= require rails-ujs
 //= require activestorage
-//= require_tree .
+//= require scrollit

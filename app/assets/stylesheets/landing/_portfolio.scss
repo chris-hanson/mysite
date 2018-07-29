@@ -1,0 +1,92 @@
+.portfolio {
+  padding-top: $spacing-large;
+}
+
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  background: black;
+  height: 660px;
+}
+
+.portfolio-item {
+  position: relative;
+  width: 33%;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.portfolio-item.medium {
+  width: 66%;
+}
+
+.portfolio-item.large {
+  width: 100%;
+}
+
+.portfolio-item__image {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: 50%;
+  position: absolute;
+  transition: all .2s ease-out;
+  cursor: pointer;
+}
+
+.portfolio-item:hover {
+  .portfolio-item__image {
+    opacity: .4;
+    transform: scale(1.1);
+  }
+
+  .portfolio-item__info-container {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.portfolio-item__info-container {
+  opacity: 0;
+  position: absolute;
+  transition: all .2s ease-out;
+  padding: 15px;
+  color: white;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  transform: scale(1.2);
+  z-index: $depth-1;
+  cursor: pointer;
+}
+
+.portfolio-item__title {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.portfolio-item__subtitle {
+  margin: 0;
+  font-size: $font-size-small;
+  font-style: italic;
+}
+
+.job {
+  padding: 0 $spacing-small;
+  display: flex;
+  flex-direction: column;
+}
+
+.job__logo {
+  img {
+    width: 100%;
+  }
+}
+
+.job__modal-content {
+  display: none;
+}

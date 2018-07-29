@@ -55,6 +55,16 @@ a {
   }
 }
 
+input, textarea {
+  background: $color-secondary;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  padding: $spacing-smaller;
+  width: 100%;
+}
+
 .subtitle {
   color: $color-gray;
   text-transform: uppercase;
@@ -80,6 +90,7 @@ a {
   max-width: 50vw;
   color: $color-text;
   background: $color-secondary;
+  box-shadow: 0 0 3px $color-dark-60;
 
   .featherlight-close {
     background: none;

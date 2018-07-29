@@ -1,0 +1,26 @@
+.contact {
+  textarea {
+    margin-top: $spacing-smaller;
+  }
+
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: $spacing-smaller;
+  }
+
+  button {
+    background: $color-secondary;
+    padding: $spacing-smaller $spacing-small;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: $font-size-small;
+    cursor: pointer;
+    transition: background $speed-fast;
+
+    &:hover {
+      background: lighten($color-secondary, 10);
+    }
+  }
+}
