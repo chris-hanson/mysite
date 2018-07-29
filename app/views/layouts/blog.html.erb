@@ -6,15 +6,22 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render "shared/blog/header" %>
 
-    <%= yield %>
+    <main class="main-container row">
+      <div class="col-sm-9">
+        <%= yield %>
+      </div>
 
-    <%= render "shared/nav" %>
+      <div class="col-sm-3">
+        <%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
+
+        <aside class="panel">
+          <h3>Categories</h3>
+        </aside>
+      </div>
+    </main>
   </body>
 </html>

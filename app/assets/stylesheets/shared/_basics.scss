@@ -23,7 +23,7 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  color: white;
+  color: $color-headers
 }
 
 h1 {
@@ -117,4 +117,10 @@ input, textarea {
 
 .-h-well {
   padding: $spacing-small;
+}
+
+.-h-owlify {
+  > * + * {
+    margin-top: $spacing-default;
+  }
 }
