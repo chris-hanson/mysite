@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,900');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @import "../../../../node_modules/normalize-scss/sass/normalize";
 @import "../../../../node_modules/flexboxgrid/dist/flexboxgrid";
+@import "../../../../node_modules/featherlight/release/featherlight.min";
 
 * {
   box-sizing: border-box;
@@ -15,7 +17,7 @@ html, body {
 body {
   font-size: $font-size-default;
   color: $color-text;
-  font-family: 'Roboto', sans-serif;
+  font-family: $font-family;
   background: $color-body-bg;
   line-height: 1.4;
 }
@@ -39,6 +41,10 @@ h2 {
   margin-bottom: $spacing-large;
 }
 
+h4 {
+  margin-bottom: $spacing-smaller;
+}
+
 a {
   text-decoration: none;
   color: $color-link;
@@ -59,8 +65,8 @@ a {
   letter-spacing: 1.2px;
 }
 
-// Layout
 
+// Layout
 .layout-container {
   max-width: $layout-max-width;
   margin: 0 auto;
@@ -70,6 +76,17 @@ a {
   padding: $spacing-large;
 }
 
+.featherlight .featherlight-content {
+  max-width: 50vw;
+  color: $color-text;
+  background: $color-secondary;
+
+  .featherlight-close {
+    background: none;
+    color: white;
+  }
+}
+
 // Helpers
 .-h-text-center {
   text-align: center;
@@ -77,4 +94,16 @@ a {
 
 .-h-bg-alt {
   background: $color-secondary;
+}
+
+.-h-pull-right {
+  float: right;
+}
+
+.-h-muted {
+  opacity: .3;
+}
+
+.-h-well {
+  padding: $spacing-small;
 }

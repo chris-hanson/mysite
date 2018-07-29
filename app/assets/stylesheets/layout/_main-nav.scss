@@ -7,6 +7,13 @@
   left: 0;
   right: 0;
   top: 0;
+  transition: background $speed-fast;
+}
+
+.main-nav.-fixed {
+  position: fixed;
+  background: rgba($color-primary, .95);
+  z-index: $depth-2;
 }
 
 .main-nav__links {
@@ -21,6 +28,7 @@
   margin-left: $spacing-small;
   transition: color $speed-fast;
   text-decoration: none;
+  letter-spacing: 1px;
 
   &:hover {
     color: white;

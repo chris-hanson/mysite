@@ -14,6 +14,29 @@
   margin-bottom: $spacing-default;
 }
 
+.hero__header {
+  position: absolute;
+  display: block;
+  width: 100%;
+  text-align: center;
+  top: 40%;
+  color: white;
+  font-size: $font-size-largest;
+  text-shadow: 0 0 6px $color-dark-80;
+}
+
+.hero__skip {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $color-light-20;
+
+  &:hover {
+    color: $color-light-60;
+  }
+}
+
 // About section
 .headshot {
   margin-right: $spacing-large;
@@ -27,6 +50,35 @@
     width: 100%;
     display: none;
   }
+}
+
+.skill-list {
+  margin: 0;
+  margin-top: $spacing-large;
+  padding: 0;
+  letter-spacing: 1px;
+  font-size: $font-size-small;
+  text-transform: uppercase;
+
+  li {
+    margin: 0;
+    list-style: none;
+    color: white;
+    margin-bottom: $spacing-small;
+  }
+}
+
+.skill-bar {
+  height: 3px;
+  width: 100%;
+  background: $color-light-10;
+  margin-top: $spacing-smallest;
+}
+
+.skill-bar__inner {
+  height: 100%;
+  background: $color-light-80;
+  width: 0;
 }
 
 // Services
@@ -50,4 +102,123 @@
     margin-top: 0;
     font-size: $font-size-small;
   }
+}
+
+// Portfolio
+.portfolio {
+  padding-top: $spacing-large;
+}
+
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  background: black;
+  height: 660px;
+}
+
+.portfolio-item {
+  position: relative;
+  width: 33%;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.portfolio-item.medium {
+  width: 66%;
+}
+
+.portfolio-item.large {
+  width: 100%;
+}
+
+.portfolio-item__image {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: 50%;
+  position: absolute;
+  transition: all .2s ease-out;
+  cursor: pointer;
+}
+
+.portfolio-item:hover {
+  .portfolio-item__image {
+    opacity: .4;
+    transform: scale(1.1);
+  }
+
+  .portfolio-item__info-container {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.portfolio-item__info-container {
+  opacity: 0;
+  position: absolute;
+  transition: all .2s ease-out;
+  padding: 15px;
+  color: white;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  transform: scale(1.2);
+  z-index: $depth-1;
+  cursor: pointer;
+}
+
+.portfolio-item__title {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.portfolio-item__subtitle {
+  margin: 0;
+  font-size: $font-size-small;
+  font-style: italic;
+}
+
+.job {
+  padding: 0 $spacing-small;
+  display: flex;
+  flex-direction: column;
+}
+
+.job__logo {
+  img {
+    width: 100%;
+  }
+}
+
+.job__modal-content {
+  display: none;
+}
+
+// Footer
+.main-footer {
+  background: $color-secondary;
+  padding: $spacing-large*2;
+  text-align: center;
+}
+
+.main-footer__name {
+  color: white;
+  letter-spacing: 1px;
+}
+
+.main-footer__social {
+  margin: $spacing-small 0;
+
+  a {
+    margin: 0 $spacing-smaller;
+    font-size: 1.5rem;
+  }
+}
+
+.main-footer__copy {
+  text-transform: uppercase;
 }

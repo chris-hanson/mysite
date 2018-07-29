@@ -1,8 +1,9 @@
-<section class="hero">
-
+<section class="hero" data-scroll-index="0">
+  <strong class="hero__header">Hello. I am <span class="typed-header"></span></strong>
+  <a href="" data-scroll-nav="1" class="hero__skip"><i class="fa fa-angle-double-down fa-4x"></i></a>
 </section>
 
-<section class="layout-container -well">
+<section class="layout-container -well" data-scroll-index="1">
   <div class="row">
     <div class="col-sm-6">
       <div class="headshot"></div>
@@ -11,7 +12,22 @@
       <h1>Hi. I'm Chris Hanson</h1>
       <em class="subtitle">Full-Stack Developer & Usability Expert</em>
 
-      <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam est ipsum tenetur recusandae impedit quo quas, numquam nihil eveniet repellendus molestiae, ipsa voluptate animi beatae harum corporis inventore laboriosam sapiente.</span><span>Explicabo perferendis dolorem iure nostrum ullam sunt quis cupiditate tempora, unde dolorum enim velit quod laudantium reprehenderit. Labore mollitia sequi ipsum minus molestias. Molestias facilis perferendis ipsa sunt minima earum.</span></p>
+      <p>With over 10 years experience writing software across various industries. I love solving problems, both technical and operational. I take a very user centric approach to my work.  </p>
+
+      <p>I'm a seasoned leader, partically in SCRUM/ Agile enviroments. I'm very comfortable working directly with clients/ end users to ensure they have the best experience.</p>
+
+      <p>I enjoy working across the full stack and experimenting with all the latest tools/ technologies. If you'd like to know more, checkout <a href data-scroll-nav="2">my past work</a> or <a href data-scroll-nav="4">hit me up</a>.</p>
+
+      <ul class="skill-list">
+        <% @skills.each do |skill| %>
+          <li>
+            <strong><%= skill.title %></strong> <small class="-h-pull-right -h-muted"><%= skill.percent_utilised %>%</small>
+            <div class="skill-bar">
+              <div class="skill-bar__inner" style="width:<%= skill.percent_utilised %>%;"></div>
+            </div>
+          </li>
+        <% end %>
+      </ul>
     </div>
   </div>
 </section>
@@ -24,7 +40,7 @@
       <div class="col-sm-4 -h-text-center">
         <i class="icon icon-laptop"></i>
         <h3>Front-end</h3>
-        <p>From simple marketing landing pages/ brochure sites to fully fledged SPAs supporting 100k+ active users per month</p>
+        <p>From simple marketing landing pages/ brochure sites to fully featured SPAs supporting 100k+ active users per month</p>
       </div>
       <div class="col-sm-4 -h-text-center">
         <i class="icon icon-layers"></i>
@@ -34,7 +50,7 @@
       <div class="col-sm-4 -h-text-center">
         <i class="icon icon-mobile"></i>
         <h3>Fully Responsive</h3>
-        <p>In this age, if your content doesn't respond well on mobile devices, <a href="http://gs.statcounter.com/platform-market-share/desktop-mobile-tablet" target="_blank">over half your audience</a> is going to have a bad time.</p>
+        <p>In this age, if your content doesn't respond well on mobile devices, <a href="http://gs.statcounter.com/platform-market-share/desktop-mobile-tablet" target="_blank">over half your audience</a> is going to have a bad time</p>
       </div>
     </div>
 
@@ -42,34 +58,183 @@
       <div class="col-sm-4 -h-text-center">
         <i class="icon icon-profile-male"></i>
         <h3>User Experience</h3>
-        <p>You can write the most elegant code and beautifly architect your app, but if the end user experience sucks, none of that matters.</p>
+        <p>Your elegant code and beautifly designed architecture won't save your app if the user experience sucks</p>
       </div>
       <div class="col-sm-4 -h-text-center">
         <i class="icon icon-browser"></i>
         <h3>X-Browser/ Accessability</h3>
-        <p>I can implement WCAG standards without totally runing your design and make it work across browsers <small>(no old IE please)</small>.</p>
+        <p>I can implement WCAG standards without totally runing your design and make it work across browsers <small>(no old IE thanks)</small></p>
       </div>
       <div class="col-sm-4 -h-text-center">
         <i class="icon icon-heart"></i>
         <h3>Care</h3>
-        <p>I take a great deal of pride in my work, I love solving problems and always pay attention to detail. I do it all out of &hearts; </p>
+        <p>I take a lot of pride from my work, I love solving problems and pay great attention to detail. I do it all out of &nbsp;<i class="fa fa-heart"></i></p>
       </div>
     </div>
   </section>
 </div>
 
-
-<section class="layout-container -well">
+<section class="portfolio" data-scroll-index="2">
   <h2 class="-h-text-center">My Past Work</h2>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut velit recusandae quidem ducimus temporibus voluptates ea impedit delectus, quo cum, repellat itaque fugiat expedita tempora amet sequi reiciendis at doloremque.</p>
+  <div class="portfolio-grid">
+    <div class="portfolio-item">
+      <div class="portfolio-item__info-container">
+        <header class="portfolio-item__title">LearnForce</header>
+        <p class="portfolio-item__subtitle">Single page webapp</p>
+      </div>
+      <div class="portfolio-item__image" style="background-image:url(https://images.unsplash.com/1/type-away-numero-dos.jpg?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5afcd5319700e98467180700dc1331d&auto=format&fit=crop&w=1350&q=80)"></div>
+    </div>
+    <div class="portfolio-item">
+      <div class="portfolio-item__info-container">
+        <header class="portfolio-item__title">Sitepass</header>
+        <p class="portfolio-item__subtitle">Single page webapp</p>
+      </div>
+      <div class="portfolio-item__image" style="background-image:url(https://images.unsplash.com/1/type-away-numero-dos.jpg?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5afcd5319700e98467180700dc1331d&auto=format&fit=crop&w=1350&q=80)"></div>
+    </div>
+    <div class="portfolio-item">
+      <div class="portfolio-item__info-container">
+        <header class="portfolio-item__title">Activity Builder</header>
+        <p class="portfolio-item__subtitle">Single page webapp</p>
+      </div>
+      <div class="portfolio-item__image" style="background-image:url(https://images.unsplash.com/1/type-away-numero-dos.jpg?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5afcd5319700e98467180700dc1331d&auto=format&fit=crop&w=1350&q=80)"></div>
+    </div>
+    <div class="portfolio-item">
+      <div class="portfolio-item__info-container">
+        <header class="portfolio-item__title">Wicked Software</header>
+        <p class="portfolio-item__subtitle">Single page webapp</p>
+      </div>
+      <div class="portfolio-item__image" style="background-image:url(https://images.unsplash.com/1/type-away-numero-dos.jpg?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5afcd5319700e98467180700dc1331d&auto=format&fit=crop&w=1350&q=80)"></div>
+    </div>
+    <div class="portfolio-item">
+      <div class="portfolio-item__info-container">
+        <header class="portfolio-item__title">Kineo Courses</header>
+        <p class="portfolio-item__subtitle">Website</p>
+      </div>
+      <div class="portfolio-item__image" style="background-image:url(https://images.unsplash.com/1/type-away-numero-dos.jpg?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5afcd5319700e98467180700dc1331d&auto=format&fit=crop&w=1350&q=80)"></div>
+    </div>
+    <div class="portfolio-item">
+      <div class="portfolio-item__info-container">
+        <header class="portfolio-item__title">Catapult LMS</header>
+        <p class="portfolio-item__subtitle">Webapp</p>
+      </div>
+      <div class="portfolio-item__image" style="background-image:url(https://images.unsplash.com/1/type-away-numero-dos.jpg?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5afcd5319700e98467180700dc1331d&auto=format&fit=crop&w=1350&q=80)"></div>
+    </div>
+    <div class="portfolio-item">
+      <div class="portfolio-item__info-container">
+        <header class="portfolio-item__title">Chris Hanson</header>
+        <p class="portfolio-item__subtitle">This site</p>
+      </div>
+      <div class="portfolio-item__image" style="background-image:url(https://images.unsplash.com/1/type-away-numero-dos.jpg?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5afcd5319700e98467180700dc1331d&auto=format&fit=crop&w=1350&q=80)"></div>
+    </div>
+    <div class="portfolio-item">
+      <div class="portfolio-item__info-container">
+        <header class="portfolio-item__title">Lane Detection</header>
+        <p class="portfolio-item__subtitle">Computer vision</p>
+      </div>
+      <div class="portfolio-item__image" style="background-image:url(https://images.unsplash.com/1/type-away-numero-dos.jpg?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5afcd5319700e98467180700dc1331d&auto=format&fit=crop&w=1350&q=80)"></div>
+    </div>
+    <div class="portfolio-item">
+      <div class="portfolio-item__info-container">
+        <header class="portfolio-item__title">Codepen</header>
+        <p class="portfolio-item__subtitle">Check out more here!</p>
+      </div>
+      <div class="portfolio-item__image" style="background-image:url(https://images.unsplash.com/1/type-away-numero-dos.jpg?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5afcd5319700e98467180700dc1331d&auto=format&fit=crop&w=1350&q=80)"></div>
+    </div>
+  </div>
 </section>
 
-<div class="-h-bg-alt services">
+<section class="portfolio layout-container -well" data-scroll-index="2">
+  <h2 class="-h-text-center">Job History</h2>
+
+  <div class="row">
+    <% @jobs.each do |job| %>
+      <div class="col-sm-4">
+        <div class="job">
+          <a href class="job__logo" data-featherlight="#job-<%= job.id %>">
+            <%= image_tag job.logo %>
+          </a>
+          <div class="job__detail">
+            <a href="#" data-featherlight="#job-<%= job.id %>"><%= job.position %></a>
+
+            <small class="-h-pull-right">
+              <%= distance_of_time_in_words(job.finished_at, job.started_at) %>
+            </small>
+          </div>
+        </div>
+        <div class="job__modal-content" id="job-<%= job.id %>">
+          <h1><%= job.position %></h1>
+          <em class="subtitle"> <%= job.company_name %></em>
+          <p><%= job.description %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>
+
+<div class="-h-bg-alt" data-scroll-index="3">
   <section class="layout-container -well">
     <h2 class="-h-text-center">Featured Posts</h2>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut velit recusandae quidem ducimus temporibus voluptates ea impedit delectus, quo cum, repellat itaque fugiat expedita tempora amet sequi reiciendis at doloremque.</p>
+    <div class="row">
+      <% @blogs.each do |blog| %>
+        <div class="col-sm-4 -h-well">
+          <h4>
+            <%= blog.title %>
+          </h4>
+
+          <small><%= time_ago_in_words(blog.updated_at) %> ago in <%= blog.topic.title %></small>
+
+          <p><%= truncate(blog.body, length: 300) %></p>
+
+          <%= link_to 'Continue reading <i class="fa fa-angle-double-right"></i>'.html_safe, blog %>
+        </div>
+      <% end %>
+    </div>
 
   </section>
 </div>
+
+<section class="layout-container -well" data-scroll-index="4">
+  <h2 class="-h-text-center">Get in Touch</h2>
+
+  <form action="">
+    <div>
+      <input required type="text" placeholder="enter name">
+      <input required type="email" placeholder="enter email">
+      <input required type="tel" placeholder="enter phone">
+    </div>
+
+    <textarea placeholder="enter message" cols="30" rows="10"></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<script>
+  (() => {
+    const $nav = $(".main-nav");
+    const $wind = $(window);
+
+    $.scrollIt({
+      activeClass: 'active',
+      topOffset: -($(".main-nav").height()+50)
+    });
+
+    $wind.on('scroll', () => {
+      $nav[`${$wind.scrollTop() ? 'add' : 'remove'}Class`]('-fixed');
+    });
+
+    new Typed(".typed-header",  {
+      strings: [
+        "Chris Hanson",
+        "Chris Hanson, code ninja",
+        "Chris Hanson, UX wizard",
+        "excessively caffeinated"
+      ],
+      typeSpeed: 40,
+      backSpeed: 30,
+      loop: true
+    });
+  })();
+</script>

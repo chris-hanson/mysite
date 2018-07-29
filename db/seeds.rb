@@ -57,3 +57,17 @@ puts "9 portfolios seeded"
 end
 
 puts "3 technologies seeded"
+
+
+3.times do |i|
+  Job.create!(
+    company_name: "Job #{i}",
+    logo: 'http://via.placeholder.com/250x100',
+    description: "Descended from astronomers, hydrogen atoms made in the interiors of collapsing stars. Gathered by gravity. A billion trillion dream of the mind's eye network of wormholes. Extraordinary claims require extraordinary evidence take root",
+    position: "Job title",
+    started_at: (i+1).years.ago,
+    finished_at: i.years.ago
+  )
+end
+
+puts "3 jobs seeded"

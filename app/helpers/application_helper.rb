@@ -9,8 +9,8 @@ module ApplicationHelper
   end
 
   def footer_helper
-    content_tag "footer" do
-      "&copy; #{Time.now.year} | <strong>Chris Hanson</strong> all rights reserved".html_safe
+    content_tag "span" do
+      "&copy; #{Time.now.year} | all rights reserved".html_safe
     end
   end
 end

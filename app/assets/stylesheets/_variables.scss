@@ -1,7 +1,7 @@
 // Colours
-$color-body-bg:    #0C0C0C;
 $color-primary:    #222;
 $color-secondary:  #111;
+$color-body-bg:    #0C0C0C;
 $color-text:       #9a9a9a;
 $color-headers:    white;
 
@@ -35,6 +35,11 @@ $color-dark-10:     rgba(black, .1);
 // Layout
 $layout-max-width:   1024px;
 
+$depth-highest:      999;
+$depth-3:            3;
+$depth-2:            2;
+$depth-1:            1;
+
 // Spacing
 $spacing-large:      3.5rem;
 $spacing-default:    2.5rem;
@@ -43,11 +48,14 @@ $spacing-smaller:    1rem;
 $spacing-smallest:   .5rem;
 
 // Type
-
+$font-size-largest:   3.6rem;
 $font-size-larger:    2.4rem;
 $font-size-large:     1.8rem;
 $font-size-default:   1.2rem;
 $font-size-small:     1rem;
+
+$font-family:         'Roboto', sans-serif;
+
 
 // Animations/ transitions
 $speed-fast:          .2s;
