@@ -1,7 +1,18 @@
 class PagesController < ApplicationController
+  layout :resolve_layout
+
   def home
     @skills = Skill.all
     @jobs = Job.all
     @blogs = Blog.limit(3).includes(:topic)
+  end
+
+  def privacy
+  end
+
+  private
+
+  def resolve_layout
+    action_name == 'home' ? 'application' : 'blog';
   end
 end

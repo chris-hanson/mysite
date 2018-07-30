@@ -65,6 +65,10 @@ input, textarea {
   width: 100%;
 }
 
+hr {
+  border-color: $color-light-10;
+}
+
 .subtitle {
   color: $color-gray;
   text-transform: uppercase;
@@ -117,6 +121,14 @@ input, textarea {
 
 .-h-well {
   padding: $spacing-small;
+}
+
+.-h-well-h {
+  padding: 0 $spacing-small;
+}
+
+.-h-well-v {
+  padding: $spacing-small 0;
 }
 
 .-h-owlify {

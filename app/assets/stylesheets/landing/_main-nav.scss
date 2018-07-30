@@ -29,8 +29,25 @@
   transition: color $speed-fast;
   text-decoration: none;
   letter-spacing: 1px;
+  position: relative;
+
+  &:after {
+    content: '';
+    height: 2px;
+    background: rgba(white, 0);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: calc(100% + 5px);
+    transition: all $speed-fast;
+  }
 
   &:hover {
     color: white;
+  }
+
+  &.active:after {
+    background: $color-light-80;
+    top: 100%;
   }
 }
