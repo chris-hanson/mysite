@@ -1,14 +1,19 @@
-<p id="notice"><%= notice %></p>
+<div class="col-sm-8">
+  <article class="panel">
+    <header>
+      <strong><%= @blog.title %></strong>
+    </header>
 
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
-</p>
+    <p>
+      <%= @blog.body %>
+    </p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @blog.body %>
-</p>
+    <footer>
+      <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
+      <%= link_to "<i class='fa fa-angle-double-left'></i> Back".html_safe, blogs_path %>
+    </footer>
+  </article>
+</div>
 
-<%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
-<%= link_to 'Back', blogs_path %>
+<%= render "shared/blog/side-panel" %>
+

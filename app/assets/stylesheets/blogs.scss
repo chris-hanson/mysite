@@ -16,32 +16,78 @@ $color-link-hover:  #F90;
 
 .main-header {
   background: white;
-  text-align: center;
   box-shadow: 0 0 10px $color-dark-30;
   position: fixed;
-  top: 0;
+  bottom: calc(100% - 45px);
   width: 100%;
   z-index: $depth-2;
+  transition: all .2s;
 
   h1 {
     font-weight: 200;
     margin: 0;
   }
 
+  &.is-open {
+    bottom: auto;
+    top: 0;
+  }
+}
+
+.main-header__about {
+  padding: $spacing-default;
+  border-bottom: 1px solid $color-dark-10;
+  display: flex;
+}
+
+.main-header__avatar {
+  margin-right: $spacing-default;
+  height: 75px;
+}
+
+.main-header__about-info {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  width: 80%;
+
+  p {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+}
+
+.main-header__contact {
+  padding-left: $spacing-large * 2;
+  font-size: 1.4rem;
+}
+
+.main-header__contact-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+
+  a {
+    margin-top: 5px;
+  }
+}
+
+.main-header__nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 $spacing-default;
 }
 
-.main-header__nav {
+.main-header__links {
   display: flex;
 }
 
-.main-header__nav a {
+.main-header__links a {
   padding: $spacing-small;
   transition: all $speed-fast;
 
+  &.is-active,
   &:hover {
     color: white;
     background: $color-link-hover;
@@ -59,3 +105,12 @@ $color-link-hover:  #F90;
   @extend .layout-container;
 }
 
+
+.side-panel {
+  @extend .panel;
+  margin-left: $spacing-small;
+
+  h3 {
+    margin-top: 0;
+  }
+}

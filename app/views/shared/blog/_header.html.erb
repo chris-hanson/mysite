@@ -1,9 +1,38 @@
 <header class="main-header">
+  <div class="main-header__about">
+    <div class="main-header__about-info">
+      <img class="main-header__avatar" src="http://via.placeholder.com/75x75" alt="">
+
+      <div>
+        <h1>About</h1>
+        <p>Hi, I'm Chris Hanson, full-stack developer/ UX designer. Welcome to my blog. If you'd like to know more about me checkout my site <%= link_to 'here', root_path %>.</p>
+      </div>
+    </div>
+
+    <div class="main-header__contact">
+      <h1>Contact</h1>
+
+      <div class="main-header__contact-links">
+        <a href><i class="fa fa-fw fa-envelope"></i> Email me</a>
+        <a href><i class="fa fa-fw fa-linkedin"></i> Linked in</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-header__nav">
     <h1><%= link_to 'Chris Hanson', root_path%></h1>
-    <div class="main-header__nav">
+    <div class="main-header__links">
       <%= link_to "Posts", blogs_path  %>
-      <a href="">About</a>
+      <a href="javascript:void;" class="js-toggle-about">About</a>
       <%= link_to "Contact", root_path %>
       <%= login_helper %>
     </div>
+  </div>
 </header>
+
+<script>
+  $('.js-toggle-about').click(function () {
+    $('.main-header').toggleClass('is-open');
+    $(this).toggleClass('is-active');
+  });
+</script>

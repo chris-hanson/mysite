@@ -1,8 +1,11 @@
-<div class="layout-container">
-  <div class="-h-owlify">
-    <%= render @blogs %>
-  </div>
+<div class="col-sm-8">
+  <section class="layout-container">
+    <div class="-h-owlify">
+      <%= render @blogs %>
+    </div>
 
-  <%= paginate @blogs %>
+    <%= paginate @blogs %>
+  </section>
 </div>
 
+<%= render "shared/blog/side-panel" %>

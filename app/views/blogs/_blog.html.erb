@@ -1,12 +1,16 @@
-<div class="panel">
-  <h3><%= blog.title %></h3>
-  <spamm>Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</spamm>
-  <p><%= truncate(blog.body, length: 200) %></p>
-  <%= link_to 'Show', blog %>
+<article class="panel">
+  <header>
+    <strong><%= blog.title %></strong>
+    <span class="-h-pull-right">Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</span>
+  </header>
+
+  <p><%= truncate(blog.body, length: 250) %></p>
+
+  <%= link_to "Continue reading <i class='fa fa-angle-double-right'></i>".html_safe, blog %>
 
   <div class="actions">
     <%= link_to blog.status, toggle_status_blog_path(blog) if logged_in?(:site_admin) %>
     <%= link_to 'Edit', edit_blog_path(blog) if logged_in?(:site_admin) %>
     <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %>
   </div>
-</div>
+</article>

@@ -6,22 +6,13 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'blogs' %>
   </head>
   <body>
     <%= render "shared/blog/header" %>
 
     <main class="main-container row">
-      <div class="col-sm-9">
-        <%= yield %>
-      </div>
-
-      <div class="col-sm-3">
-        <%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
-
-        <aside class="panel">
-          <h3>Categories</h3>
-        </aside>
-      </div>
+      <%= yield %>
     </main>
   </body>
 </html>
