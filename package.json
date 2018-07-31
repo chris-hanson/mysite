@@ -4,6 +4,7 @@
   "dependencies": {
     "featherlight": "^1.7.13",
     "flexboxgrid": "^6.3.1",
+    "html5sortable": "^0.9.3",
     "jquery": "^3.3.1",
     "normalize-scss": "^7.0.1",
     "typed.js": "^2.0.8"

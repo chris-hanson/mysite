@@ -79,70 +79,16 @@
 <section class="portfolio" data-scroll-index="2">
   <h2 class="-h-text-center">My Past Work</h2>
 
-  <div class="portfolio-grid">
-    <div class="portfolio-item">
-      <div class="portfolio-item__info-container">
-        <header class="portfolio-item__title">LearnForce</header>
-        <p class="portfolio-item__subtitle">Single page webapp</p>
+  <div class="portfolio-grid js-sortable">
+    <% @portfolio_items.each do |item| %>
+      <div class="portfolio-item">
+        <div class="portfolio-item__info-container">
+          <header class="portfolio-item__title"><%= item.title %></header>
+          <p class="portfolio-item__subtitle"><%= item.subtitle %></p>
+        </div>
+        <div class="portfolio-item__image" style="background-image:url(<%= item.thumb_image %>)"></div>
       </div>
-      <div class="portfolio-item__image" style="background-image:url(https://images.unsplash.com/1/type-away-numero-dos.jpg?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5afcd5319700e98467180700dc1331d&auto=format&fit=crop&w=1350&q=80)"></div>
-    </div>
-    <div class="portfolio-item">
-      <div class="portfolio-item__info-container">
-        <header class="portfolio-item__title">Sitepass</header>
-        <p class="portfolio-item__subtitle">Single page webapp</p>
-      </div>
-      <div class="portfolio-item__image" style="background-image:url(https://images.unsplash.com/1/type-away-numero-dos.jpg?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5afcd5319700e98467180700dc1331d&auto=format&fit=crop&w=1350&q=80)"></div>
-    </div>
-    <div class="portfolio-item">
-      <div class="portfolio-item__info-container">
-        <header class="portfolio-item__title">Activity Builder</header>
-        <p class="portfolio-item__subtitle">Single page webapp</p>
-      </div>
-      <div class="portfolio-item__image" style="background-image:url(https://images.unsplash.com/1/type-away-numero-dos.jpg?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5afcd5319700e98467180700dc1331d&auto=format&fit=crop&w=1350&q=80)"></div>
-    </div>
-    <div class="portfolio-item">
-      <div class="portfolio-item__info-container">
-        <header class="portfolio-item__title">Wicked Software</header>
-        <p class="portfolio-item__subtitle">Single page webapp</p>
-      </div>
-      <div class="portfolio-item__image" style="background-image:url(https://images.unsplash.com/1/type-away-numero-dos.jpg?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5afcd5319700e98467180700dc1331d&auto=format&fit=crop&w=1350&q=80)"></div>
-    </div>
-    <div class="portfolio-item">
-      <div class="portfolio-item__info-container">
-        <header class="portfolio-item__title">Kineo Courses</header>
-        <p class="portfolio-item__subtitle">Website</p>
-      </div>
-      <div class="portfolio-item__image" style="background-image:url(https://images.unsplash.com/1/type-away-numero-dos.jpg?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5afcd5319700e98467180700dc1331d&auto=format&fit=crop&w=1350&q=80)"></div>
-    </div>
-    <div class="portfolio-item">
-      <div class="portfolio-item__info-container">
-        <header class="portfolio-item__title">Catapult LMS</header>
-        <p class="portfolio-item__subtitle">Webapp</p>
-      </div>
-      <div class="portfolio-item__image" style="background-image:url(https://images.unsplash.com/1/type-away-numero-dos.jpg?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5afcd5319700e98467180700dc1331d&auto=format&fit=crop&w=1350&q=80)"></div>
-    </div>
-    <div class="portfolio-item">
-      <div class="portfolio-item__info-container">
-        <header class="portfolio-item__title">Chris Hanson</header>
-        <p class="portfolio-item__subtitle">This site</p>
-      </div>
-      <div class="portfolio-item__image" style="background-image:url(https://images.unsplash.com/1/type-away-numero-dos.jpg?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5afcd5319700e98467180700dc1331d&auto=format&fit=crop&w=1350&q=80)"></div>
-    </div>
-    <div class="portfolio-item">
-      <div class="portfolio-item__info-container">
-        <header class="portfolio-item__title">Lane Detection</header>
-        <p class="portfolio-item__subtitle">Computer vision</p>
-      </div>
-      <div class="portfolio-item__image" style="background-image:url(https://images.unsplash.com/1/type-away-numero-dos.jpg?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5afcd5319700e98467180700dc1331d&auto=format&fit=crop&w=1350&q=80)"></div>
-    </div>
-    <div class="portfolio-item">
-      <div class="portfolio-item__info-container">
-        <header class="portfolio-item__title">Codepen</header>
-        <p class="portfolio-item__subtitle">Check out more here!</p>
-      </div>
-      <div class="portfolio-item__image" style="background-image:url(https://images.unsplash.com/1/type-away-numero-dos.jpg?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5afcd5319700e98467180700dc1331d&auto=format&fit=crop&w=1350&q=80)"></div>
-    </div>
+    <% end %>
   </div>
 </section>
 
@@ -235,32 +181,3 @@
   </form>
 </section>
 
-<script>
-  (() => {
-    const $nav = $(".main-nav");
-    const $wind = $(window);
-
-    $.scrollIt({
-      activeClass: 'active',
-      topOffset: -($(".main-nav").height()+50)
-    });
-
-    $wind.on('scroll', () => {
-      $nav[`${$wind.scrollTop() ? 'add' : 'remove'}Class`]('-fixed');
-    });
-
-    $wind.trigger('scroll');
-
-    new Typed(".typed-header",  {
-      strings: [
-        "Chris Hanson",
-        "Chris Hanson, code ninja",
-        "Chris Hanson, UX wizard",
-        "excessively caffeinated"
-      ],
-      typeSpeed: 40,
-      backSpeed: 30,
-      loop: true
-    });
-  })();
-</script>

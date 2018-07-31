@@ -1,4 +1,14 @@
 .contact {
+  input, textarea {
+    background: $color-secondary;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    padding: $spacing-smaller;
+    width: 100%;
+  }
+
   textarea {
     margin-top: $spacing-smaller;
   }

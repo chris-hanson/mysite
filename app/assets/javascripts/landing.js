@@ -13,6 +13,8 @@
 //= require jquery
 //= require typed.js/lib/typed.js
 //= require featherlight
+//= require html5sortable/dist/html5sortable
 //= require rails-ujs
 //= require activestorage
 //= require scrollit
+//= require landing/index

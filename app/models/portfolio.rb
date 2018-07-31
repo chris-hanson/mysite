@@ -7,6 +7,10 @@ class Portfolio < ApplicationRecord
   validates_presence_of :title, :body, :main_image, :thumb_image
   after_initialize :set_defaults
 
+  def self.by_position
+    order("position aASC")
+  end
+
   def set_defaults
     self.main_image ||= Placeholder.image_generator(650,400)
     self.thumb_image ||= Placeholder.image_generator(350,200)

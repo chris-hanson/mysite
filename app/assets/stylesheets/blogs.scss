@@ -13,6 +13,16 @@ $color-link:        #888;
 $color-link-hover:  #F90;
 
 @import 'shared/basics';
+@import 'shared/footer';
+
+.main-footer {
+  background: white;
+  margin-top: $spacing-large;
+}
+
+.main-footer__name {
+  color: $color-text;
+}
 
 .main-header {
   background: white;
@@ -113,4 +123,85 @@ $color-link-hover:  #F90;
   h3 {
     margin-top: 0;
   }
+}
+
+// Forms
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin-top: $spacing-default;
+  outline: none;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $spacing-small;
+
+  input:not([type="checkbox"]), textarea {
+    outline: none;
+    padding: $spacing-smaller;
+    border: 1px solid $color-dark-10;
+    min-width: 320px;
+  }
+
+  label {
+    margin-bottom: $spacing-smaller/2;
+  }
+}
+
+.field.-inline {
+  flex-direction: row;
+  align-items: center;
+
+  label {
+    margin-bottom: 0;
+  }
+}
+
+.btn {
+  background: none;
+  border: none;
+  transition: background $speed-fast;
+  cursor: pointer;
+  padding: $spacing-smaller $spacing-small;
+}
+
+.btn.-block {
+  width: 100%;
+  display: block;
+}
+
+.btn.-primary {
+  background: $color-link-hover;
+  color: white;
+
+  &:hover {
+    background: lighten($color-link-hover, 10);
+  }
+}
+
+#error_explanation {
+  color: $color-danger;
+
+  h2 {
+    font-size: $font-size-default;
+    letter-spacing: initial;
+    margin-bottom: 0;
+    font-weight: normal;
+    color: inherit;
+  }
+}
+
+.field_with_errors {
+  input {
+    border-color: $color-danger;
+  }
+}
+
+.privacy h2 {
+  font-size: $font-size-large;
+  letter-spacing: initial;
+  margin: $spacing-small 0;
 }

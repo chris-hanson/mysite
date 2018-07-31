@@ -5,6 +5,7 @@ class PagesController < ApplicationController
     @skills = Skill.all
     @jobs = Job.all
     @blogs = Blog.limit(3).includes(:topic)
+    @portfolio_items = Portfolio.all.includes(:technologies)
   end
 
   def privacy

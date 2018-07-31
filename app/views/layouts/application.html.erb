@@ -6,8 +6,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/et-line@1.0.1/style.min.css', media: 'all' %>
-    <%= stylesheet_link_tag    'landing', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'landing' %>
+    <%= stylesheet_link_tag    'landing', media: 'all' %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
@@ -15,6 +14,8 @@
   <body>
     <%= render "shared/landing/nav" %>
     <%= yield %>
-    <%= render "shared/landing/footer" %>
+    <%= render "shared/footer" %>
+
+    <%= javascript_include_tag 'landing' %>
   </body>
 </html>
