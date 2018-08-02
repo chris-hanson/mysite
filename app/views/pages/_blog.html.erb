@@ -1,0 +1,11 @@
+<div class="col-sm-4 -h-well-h">
+  <h4>
+    <%= blog.title %>
+  </h4>
+
+  <small><%= time_ago_in_words(blog.updated_at) %> ago in <%= blog.topic.title %></small>
+
+  <p><%= truncate(blog.body, length: 300) %></p>
+
+  <%= link_to 'Continue reading <i class="fa fa-angle-double-right"></i>'.html_safe, blog %>
+</div>

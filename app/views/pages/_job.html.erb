@@ -1,0 +1,18 @@
+<div class="col-sm-4">
+  <div class="job">
+    <a href class="job__logo" data-featherlight-variant="-small" data-featherlight="#job-<%= job.id %>">
+      <%= image_tag job.logo %>
+    </a>
+    <div class="job__detail">
+      <a href="#" data-featherlight-variant="-small" data-featherlight="#job-<%= job.id %>"><%= job.position %></a>
+     <small class="-h-pull-right">
+        <%= distance_of_time_in_words(job.finished_at, job.started_at) %>
+      </small>
+    </div>
+  </div>
+  <div class="job__modal-content" id="job-<%= job.id %>">
+    <h1><%= job.position %></h1>
+    <em class="subtitle"> <%= job.company_name %></em>
+    <p><%= job.description %></p>
+  </div>
+</div>
