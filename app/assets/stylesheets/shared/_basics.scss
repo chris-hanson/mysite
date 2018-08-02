@@ -80,8 +80,11 @@ hr {
   padding: $spacing-large;
 }
 
-.featherlight .featherlight-content {
+.featherlight.-small .featherlight-content {
   max-width: 50vw;
+}
+
+.featherlight .featherlight-content {
   color: $color-text;
   background: $color-secondary;
   box-shadow: 0 0 3px $color-dark-60;

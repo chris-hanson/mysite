@@ -25,5 +25,7 @@
     loop: true
   });
 
-  sortable('.js-sortable');
+  $('.js-portfolio-item').click(() => {
+
+  });
 })();

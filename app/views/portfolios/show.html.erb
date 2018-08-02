@@ -1,12 +1,21 @@
-<%= image_tag @portfolio_item.main_image %>
+<div class="js-portfolio-modal portfolio-item-content">
+  <div class="row">
+    <div class="col-sm-7 portfolio-item-content__image">
+      <%= image_tag @portfolio_item.main_image %>
+    </div>
 
-<h1><%= @portfolio_item.title %></h1>
+    <div class="col-sm-5 portfolio-item-content__text">
+      <h1><%= @portfolio_item.title %></h1>
 
-<em><%= @portfolio_item.subtitle %></em>
+      <em class="subtitle"><%= @portfolio_item.subtitle %></em>
 
-<p><%= @portfolio_item.body %></p>
+      <p><%= @portfolio_item.body %></p>
 
-<h2>Technology</h2>
-<% @portfolio_item.technologies.each do |t| %>
-  <p><%= t.name %></p>
-<% end %>
+      <h4>Technology used</h4>
+      <% @portfolio_item.technologies.each do |t| %>
+        <p><%= t.name %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
+

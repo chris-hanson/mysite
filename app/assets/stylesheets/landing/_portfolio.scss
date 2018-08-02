@@ -75,6 +75,18 @@
   font-style: italic;
 }
 
+.portfolio-item-content {
+  padding: $spacing-small;
+}
+
+.portfolio-item-content__image img {
+  width: 100%;
+}
+
+.portfolio-item-content__text {
+  padding-left: $spacing-large;
+}
+
 .job {
   padding: 0 $spacing-small;
   display: flex;
