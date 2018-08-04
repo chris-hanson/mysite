@@ -1,14 +1,20 @@
-<header class="main-nav">
+<header class="main-nav js-nav">
   <div class="main-nav__logo">
     <strong>Chris Hanson</strong>
   </div>
 
-  <nav class="main-nav__links">
-    <a href data-scroll-nav="0" class="main-nav__link">Home</a>
-    <a href data-scroll-nav="1" class="main-nav__link">About</a>
-    <a href data-scroll-nav="2" class="main-nav__link">Portfolio</a>
-    <a href data-scroll-nav="3" class="main-nav__link">Blog</a>
-    <a href data-scroll-nav="4" class="main-nav__link">Contact</a>
-    <%= login_helper %>
-  </nav>
+  <label class="main-nav__links-toggle js-nav-links-toggle">
+    <input type="checkbox">
+    <i class="fa fa-bars fa-2x main-nav__links-toggle-icon"></i>
+
+    <nav class="main-nav__links js-nav-links">
+      <a href data-scroll-nav="0" class="main-nav__link">Home</a>
+      <a href data-scroll-nav="1" class="main-nav__link">About</a>
+      <a href data-scroll-nav="2" class="main-nav__link">Portfolio</a>
+      <a href data-scroll-nav="3" class="main-nav__link">Blog</a>
+      <a href data-scroll-nav="4" class="main-nav__link">Contact</a>
+      <%= login_helper %>
+    </nav>
+  </label>
+
 </header>

@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
-  include DeviseWhitelist
-  include CurrentUserConcern
   include SetTitle
+  include LayoutByResource
+  include DeviseWhitelist
+  include DeviseRedirect
+  include CurrentUserConcern
 end

@@ -62,3 +62,11 @@
     font-size: $font-size-small;
   }
 }
+
+
+// Responsive
+.headshot {
+  @include breakpoint($break-768) {
+    display: none;
+  }
+}

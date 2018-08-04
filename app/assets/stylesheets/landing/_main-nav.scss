@@ -39,7 +39,7 @@
     position: absolute;
     left: 0;
     top: calc(100% + 3px);
-    transition: all $speed-fast;
+    transition: opacity $speed-fast, top $speed-fast;
   }
 
   &:hover {
@@ -53,5 +53,80 @@
   &.active:after {
     background: $color-light-80;
     top: 100%;
+  }
+}
+
+.main-nav__links-toggle {
+  input {
+    display: none;
+  }
+
+  input:checked ~ .main-nav__links {
+    display: flex;
+  }
+
+  input:checked + .main-nav__links-toggle-icon {
+    opacity: 1;
+  }
+}
+
+.main-nav__links-toggle-icon {
+  display: none;
+  opacity: .66;
+  transition: opacity $speed-fast;
+  cursor: pointer;
+}
+
+// Responsive
+.main-nav {
+  @include breakpoint($break-600) {
+    background: rgba($color-primary, .95);
+
+    .main-nav__links-toggle-icon {
+      display: inline-block;
+    }
+
+    .main-nav__logo {
+      font-size: $font-size-large;
+    }
+  }
+}
+
+.main-nav__links {
+  @include breakpoint($break-600) {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    flex-direction: column;
+    display: none;
+    min-width: 50%;
+    background: rgba($color-primary, .95);
+    padding: $spacing-default;
+    z-index: $depth-3;
+
+    .main-nav__link {
+      margin-bottom: $spacing-smaller;
+      font-size: $font-size-large;
+      letter-spacing: 4px;
+    }
+
+    .main-nav__link:after {
+      top: auto;
+      left: auto;
+      right: calc(100% + 15px);
+      width: 2px;
+      height: 100%;
+      transition: opacity $speed-fast, right $speed-fast;
+    }
+
+    .active:after {
+      background: $color-light-80;
+      right: calc(100% + 10px);
+    }
+  }
+
+  @include breakpoint($break-480) {
+    width: 100%;
+    padding-top: 0;
   }
 }

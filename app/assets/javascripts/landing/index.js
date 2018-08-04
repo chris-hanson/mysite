@@ -1,15 +1,20 @@
 (() => {
-  const $nav = $(".main-nav");
+  const $nav = $(".js-nav");
   const $wind = $(window);
 
   $.scrollIt({
     activeClass: 'active',
-    topOffset: -($(".main-nav").height()+50)
+    topOffset: -($(".js-nav").height()+50)
   });
 
   $wind.on('scroll', () => {
     $nav[`${$wind.scrollTop() ? 'add' : 'remove'}Class`]('-fixed');
   });
+
+  $('.js-nav-links').click(() => {
+    $('.js-nav-links-toggle').click();
+  });
+
 
   $wind.trigger('scroll');
 
@@ -23,9 +28,5 @@
     typeSpeed: 40,
     backSpeed: 30,
     loop: true
-  });
-
-  $('.js-portfolio-item').click(() => {
-
   });
 })();

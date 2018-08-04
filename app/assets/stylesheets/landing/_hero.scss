@@ -43,3 +43,14 @@
     transform: translate(-50%, -15px);
   }
 }
+
+// Responsive
+.hero__header {
+  @include breakpoint($break-768) {
+    font-size: $font-size-larger;
+  }
+
+  @include breakpoint($break-480) {
+    font-size: $font-size-large;
+  }
+}
