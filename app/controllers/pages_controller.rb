@@ -11,6 +11,9 @@ class PagesController < ApplicationController
   def privacy
   end
 
+  def admin
+  end
+
   private
 
   def resolve_layout

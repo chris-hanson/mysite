@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
 
   get 'privacy', to: 'pages#privacy'
+  get 'admin', to: 'pages#admin'
 
   resources :blogs do
     member do

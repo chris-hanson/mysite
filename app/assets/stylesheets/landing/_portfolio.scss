@@ -87,10 +87,15 @@
   padding-left: $spacing-large;
 }
 
+.jobs {
+  justify-content: center;
+}
+
 .job {
   padding: 0 $spacing-small;
   display: flex;
   flex-direction: column;
+  margin-bottom: $spacing-small;
 }
 
 .job__logo {
@@ -101,4 +106,25 @@
 
 .job__modal-content {
   display: none;
+}
+
+// Responsive
+.portfolio-grid {
+  @include breakpoint($break-600) {
+    .portfolio-item {
+      width: 50%;
+    }
+  }
+}
+
+.portfolio-item-content__text {
+  @include breakpoint($break-768) {
+    padding: $spacing-large 0 0;
+  }
+}
+
+.portfolio-item-content__image {
+  @include breakpoint($break-768) {
+    width: 100%;
+  }
 }

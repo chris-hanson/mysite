@@ -82,6 +82,11 @@ hr {
 
 .featherlight.-small .featherlight-content {
   max-width: 50vw;
+
+  @include breakpoint($break-600) {
+    max-width: initial;
+    margin: 0 $spacing-small;
+  }
 }
 
 .featherlight .featherlight-content {

@@ -4,7 +4,8 @@ module ApplicationHelper
       (link_to 'Login', new_user_session_path, class: 'main-nav__link') +
       (link_to 'Register', new_user_registration_path, class: 'main-nav__link')
     else
-      link_to 'Logout', destroy_user_session_path, {method: :DELETE, class: 'main-nav__link'}
+      (link_to 'Admin', admin_path,class: 'main-nav__link' if logged_in?(:site_admin)) +
+      (link_to 'Logout', destroy_user_session_path, {method: :DELETE, class: 'main-nav__link'})
     end
   end
 
