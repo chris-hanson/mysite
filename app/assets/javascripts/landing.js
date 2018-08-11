@@ -14,6 +14,8 @@
 //= require typed.js/lib/typed.js
 //= require featherlight
 //= require html5sortable/dist/html5sortable
+//= require cocoon
+//= require gritter
 //= require rails-ujs
 //= require activestorage
 //= require scrollit

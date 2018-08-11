@@ -15,18 +15,19 @@
     $('.js-nav-links-toggle').click();
   });
 
-
   $wind.trigger('scroll');
 
-  new Typed(".typed-header",  {
-    strings: [
-      "Chris Hanson",
-      "Chris Hanson, code ninja",
-      "Chris Hanson, UX wizard",
-      "excessively caffeinated"
-    ],
-    typeSpeed: 40,
-    backSpeed: 30,
-    loop: true
-  });
+  if ($('.typed-header').length) {
+    new Typed('.typed-header',  {
+      strings: [
+        "Chris Hanson",
+        "Chris Hanson, code ninja",
+        "Chris Hanson, UX wizard",
+        "excessively caffeinated"
+      ],
+      typeSpeed: 40,
+      backSpeed: 30,
+      loop: true
+    });
+  }
 })();

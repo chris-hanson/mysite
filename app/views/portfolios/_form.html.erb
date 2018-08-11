@@ -1,4 +1,10 @@
 <%= form_for(portfolio_item) do |f| %>
+  <% if portfolio_item.errors.any? %>
+    <% portfolio_item.errors.full_messages.each do |message| %>
+      <%= js add_gritter(message) %>
+    <% end %>
+  <% end %>
+
   <div class="field">
     <%= f.label :title %>
     <%= f.text_field :title %>
@@ -24,14 +30,14 @@
     <%= f.file_field :thumb_image %>
   </div>
 
-  <ul>
+  <div class="field">
     <%= f.fields_for :technologies do |tf| %>
-      <li>
-        <%= tf.label :name %>
-        <%= tf.text_field :name %>
-      </li>
+      <%= render 'technology_fields', f: tf %>
     <% end %>
-  </ul>
+
+    <%= link_to_add_association 'Add Tech', f, :technologies %>
+  </div>
+
 
   <div class="actions">
     <%= f.submit %>

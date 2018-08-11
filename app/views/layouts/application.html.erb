@@ -7,6 +7,7 @@
 
     <%= stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/et-line@1.0.1/style.min.css', media: 'all' %>
     <%= stylesheet_link_tag    'landing', media: 'all' %>
+    <%= javascript_include_tag 'landing' %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
@@ -16,6 +17,6 @@
     <%= yield %>
     <%= render "shared/footer" %>
 
-    <%= javascript_include_tag 'landing' %>
+    <%= render "shared/alerts" %>
   </body>
 </html>

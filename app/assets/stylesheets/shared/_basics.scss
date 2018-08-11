@@ -80,6 +80,11 @@ hr {
   padding: $spacing-large;
 }
 
+.main-container {
+  margin-top: 80px;
+  @extend .layout-container;
+}
+
 .featherlight.-small .featherlight-content {
   max-width: 50vw;
 
@@ -98,6 +103,26 @@ hr {
     background: none;
     color: white;
   }
+}
+
+#gritter-notice-wrapper {
+  right: auto;
+  top: auto;
+  left: $spacing-small;
+  bottom: $spacing-small;
+  position: fixed;
+  max-width: 300px;
+  z-index: $depth-highest;
+}
+
+.gritter-item {
+  background: $color-dark-80;
+  padding: $spacing-small/2 $spacing-small;
+  margin-top: $spacing-small/2;
+}
+
+.gritter-title {
+  display: none;
 }
 
 // Helpers

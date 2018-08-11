@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "gritter";
 @import 'shared/variables';
 @import 'shared/responsive';
 
@@ -110,12 +111,6 @@ $color-link-hover:  #F90;
   padding: $spacing-default;
   box-shadow: 0 0 4px $color-dark-20;
 }
-
-.main-container {
-  margin-top: 80px;
-  @extend .layout-container;
-}
-
 
 .side-panel {
   @extend .panel;
