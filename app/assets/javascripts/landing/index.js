@@ -1,4 +1,4 @@
-(() => {
+$(() => {
   const $nav = $(".js-nav");
   const $wind = $(window);
 
@@ -30,4 +30,4 @@
       loop: true
     });
   }
-})();
+});

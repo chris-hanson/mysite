@@ -18,4 +18,13 @@ module ApplicationHelper
       "&copy; #{Time.now.year} | all rights reserved".html_safe
     end
   end
+
+  def flash_alerts
+    flash_msg = (flash[:alert] || flash[:error] || flash[:notice])
+    alert(flash_msg) if flash_msg
+  end
+
+  def alert msg
+    js add_gritter(msg, time: 3000)
+  end
 end
