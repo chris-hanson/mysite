@@ -23,6 +23,21 @@
   </div>
 </section>
 
+<div class="-h-bg-alt" data-scroll-index="3">
+  <section class="layout-container -well">
+    <h2 class="-h-text-center">Featured Posts</h2>
+
+    <div class="row">
+      <%= render partial: 'blog', collection: @blogs %>
+    </div>
+
+    <div class="-h-well -h-text-center">
+      <hr>
+      <p><small><%= link_to 'View full blog', blogs_path %></small></p>
+    </div>
+  </section>
+</div>
+
 <div id="contact"></div>
 <section class="layout-container -well contact"  data-scroll-index="4">
   <%= render 'contact' %>
