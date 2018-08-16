@@ -1,5 +1,11 @@
 <div class="col-sm-4">
   <aside class="side-panel">
-    <h3>Categories</h3>
+    <h3>Topics</h3>
+
+    <ul>
+      <% @topics.each do |topic| %>
+        <li><%= link_to topic.title, topic_show_path(topic.id) %></li>
+      <% end %>
+    </ul>
   </aside>
 </div>

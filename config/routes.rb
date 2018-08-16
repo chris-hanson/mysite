@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
 
   get 'privacy', to: 'pages#privacy'
+  get 'topics/:id', to: 'topics#show', as: 'topic_show'
 
   resources :blogs do
     member do

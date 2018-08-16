@@ -1,7 +1,7 @@
 <article class="panel">
-  <header>
+  <header class="blog__header">
     <strong><%= blog.title %></strong>
-    <span class="-h-pull-right">Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</span>
+    <span>Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</span>
   </header>
 
   <p><%= truncate(blog.body, length: 250) %></p>

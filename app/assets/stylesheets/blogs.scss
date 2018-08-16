@@ -17,6 +17,27 @@ $color-link-hover:  #F90;
 @import 'shared/basics';
 @import 'shared/footer';
 
+.main-container {
+  @include breakpoint($break-1024) {
+    padding: 0 $spacing-large;
+  }
+
+  @include breakpoint($break-768) {
+    .side-panel {
+      display: none;
+    }
+  }
+}
+
+.main-header__nav {
+  @include breakpoint($break-600) {
+    h1 {
+      display: none;
+    }
+  }
+}
+
+
 .main-footer {
   background: white;
   margin-top: $spacing-large;
@@ -55,6 +76,10 @@ $color-link-hover:  #F90;
 .main-header__avatar {
   margin-right: $spacing-default;
   height: 75px;
+
+  @include breakpoint($break-480) {
+    display: none;
+  }
 }
 
 .main-header__about-info {
@@ -70,14 +95,14 @@ $color-link-hover:  #F90;
 }
 
 .main-header__contact {
-  padding-left: $spacing-large * 2;
-  font-size: 1.4rem;
+  min-width: 11rem;
+  margin-left: 3rem;
 }
 
 .main-header__contact-links {
   display: flex;
-  flex-direction: column;
   margin-top: 5px;
+  flex-direction: column;
 
   a {
     margin-top: 5px;
@@ -139,11 +164,27 @@ fieldset {
     outline: none;
     padding: $spacing-smaller;
     border: 1px solid $color-dark-10;
-    min-width: 320px;
   }
 
   label {
     margin-bottom: $spacing-smaller/2;
+  }
+}
+
+.new_user {
+  min-width: 320px;
+
+  @include breakpoint($break-600) {
+    min-width: 0;
+  }
+}
+
+.blog__header {
+  display: flex;
+  justify-content: space-between;
+
+  @include breakpoint($break-600) {
+    flex-direction: column;
   }
 }
 
@@ -178,6 +219,10 @@ fieldset {
   }
 }
 
+.btn.-default {
+  background: white;
+}
+
 #error_explanation {
   color: $color-danger;
 
@@ -200,4 +245,33 @@ fieldset {
   font-size: $font-size-large;
   letter-spacing: initial;
   margin: $spacing-small 0;
+}
+
+.layout-container {
+  .pagination {
+    padding: $spacing-small 0;
+    margin: 0;
+  }
+
+  .pagination {
+    a {
+      @extend .btn;
+      @extend .btn.-default;
+
+      &:hover {
+        border: 1px solid $color-dark-10;
+      }
+    }
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .pagination span.disabled {
+    padding: $spacing-smaller;
+  }
+
+  @include breakpoint($break-600) {
+    width: 100%;
+  }
 }
