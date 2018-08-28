@@ -16,8 +16,6 @@ class PagesController < ApplicationController
     @contact = Contact.new(params[:contact])
     @contact.request = request
 
-    byebug
-
     respond_to do |format|
       if @contact.deliver
         @contact = Contact.new
