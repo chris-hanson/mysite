@@ -19,11 +19,9 @@ class PagesController < ApplicationController
     respond_to do |format|
       if @contact.deliver
         @contact = Contact.new
-        format.html { render 'index'}
-        format.js   { flash.now[:success] = "Thank you for your message. I'll get back to you soon!" }
+        format.html { redirect_to root_path, notice: 'Thank you for your message'}
       else
-        format.html { render 'index' }
-        format.js   { flash.now[:error] = "Message did not send." }
+        format.html { redirect_to root_path, notice: 'Failed to send email.' }
       end
     end
   end

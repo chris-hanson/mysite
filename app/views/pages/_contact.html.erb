@@ -1,6 +1,6 @@
 <h2 class="-h-text-center">Get in Touch</h2>
 
-<%= form_for @contact, url: home_contact_path, remote: true do |f| %>
+<%= form_for @contact, url: home_contact_path do |f| %>
   <div class="row">
     <div class="col-sm-4 form-group">
       <%= f.text_field :name, required: true, placeholder: "enter name"%></br>

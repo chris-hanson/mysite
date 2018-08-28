@@ -93,7 +93,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.action_mailer.default_url_options = { 
-    host: "https://lit-earth-31911.herokuapp.com/" 
+    host: "https://lit-earth-31911.herokuapp.com" 
   }
 
   config.action_mailer.delivery_method = :smtp
