@@ -1,15 +1,11 @@
 .headshot {
   margin-right: $spacing-large;
   border: 4px dashed $color-light-10;
-  background: url(https://images.unsplash.com/photo-1523913507744-1970fd11e9ff?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bfb55e141136b2146956af380f8678ab&auto=format&fit=crop&w=634&q=80);
+  background: image-url("me.jpg");
   height: 100%;
   background-size: cover;
   background-position: 50%;
-
-  img {
-    width: 100%;
-    display: none;
-  }
+  opacity: .8;
 }
 
 .skill-list {

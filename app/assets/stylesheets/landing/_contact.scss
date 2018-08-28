@@ -15,6 +15,11 @@
     width: 100%;
   }
 
+  input[type='submit'] {
+    width: auto;
+    cursor: pointer;
+  }
+
   textarea {
     margin-top: $spacing-smaller;
   }
@@ -41,7 +46,7 @@
   }
 
   @include breakpoint($break-768) {
-    input, textarea {
+    input:not([type='submit']), textarea {
       width: 100%;
       margin-top: 0;
     }
