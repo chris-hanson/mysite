@@ -13,6 +13,6 @@
   <div class="job__modal-content" id="job-<%= job.id %>">
     <h1><%= job.position %></h1>
     <em class="subtitle"> <%= job.company_name %></em>
-    <p><%= job.description %></p>
+    <p><%= job.description.html_safe %></p>
   </div>
 </div>

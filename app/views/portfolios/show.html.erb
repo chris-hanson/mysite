@@ -11,7 +11,7 @@
 
       <em class="subtitle"><%= @portfolio_item.subtitle %></em>
 
-      <p><%= @portfolio_item.body %></p>
+      <p><%= @portfolio_item.body.html_safe %></p>
 
       <% if @portfolio_item.technologies.any? %>
         <h4>Technology used</h4>
