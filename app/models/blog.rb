@@ -8,6 +8,6 @@ class Blog < ApplicationRecord
   belongs_to :topic
 
   def self.featured
-    where(featured: true).order("created_at")
+    where(featured: true).order("created_at DESC")
   end
 end
