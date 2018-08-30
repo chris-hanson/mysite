@@ -3,7 +3,7 @@
     <%= blog.title %>
   </h4>
 
-  <small><%= time_ago_in_words(blog.updated_at) %> ago in <%= blog.topic.title %></small>
+  <small><%= time_ago_in_words(blog.created_at) %> ago in <%= blog.topic.title %></small>
 
   <p><%= truncate(blog.body.html_safe, length: 300, escape: false) %></p>
 

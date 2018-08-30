@@ -1,0 +1,93 @@
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin-top: $spacing-default;
+  outline: none;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $spacing-small;
+
+  input:not([type="checkbox"]), textarea {
+    outline: none;
+    padding: $spacing-smaller;
+    border: 1px solid $color-dark-10;
+  }
+
+  label {
+    margin-bottom: $spacing-smaller/2;
+  }
+}
+
+.new_user {
+  min-width: 320px;
+
+  @include breakpoint($break-600) {
+    min-width: 0;
+  }
+}
+
+.blog__header {
+  display: flex;
+  justify-content: space-between;
+
+  @include breakpoint($break-600) {
+    flex-direction: column;
+  }
+}
+
+.field.-inline {
+  flex-direction: row;
+  align-items: center;
+
+  label {
+    margin-bottom: 0;
+  }
+}
+
+.btn {
+  background: none;
+  border: none;
+  transition: background $speed-fast;
+  cursor: pointer;
+  padding: $spacing-smaller $spacing-small;
+}
+
+.btn.-block {
+  width: 100%;
+  display: block;
+}
+
+.btn.-primary {
+  background: $color-link-hover;
+  color: white;
+
+  &:hover {
+    background: lighten($color-link-hover, 10);
+  }
+}
+
+.btn.-default {
+  background: white;
+}
+
+#error_explanation {
+  color: $color-danger;
+
+  h2 {
+    font-size: $font-size-default;
+    letter-spacing: initial;
+    margin-bottom: 0;
+    font-weight: normal;
+    color: inherit;
+  }
+}
+
+.field_with_errors {
+  input {
+    border-color: $color-danger;
+  }
+}
