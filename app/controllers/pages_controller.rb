@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   def home
     @skills = Skill.all
     @jobs = Job.all
-    @blogs = Blog.limit(3).includes(:topic)
+    @blogs = Blog.featured.includes(:topic)
     @portfolio_items = Portfolio.by_position.includes(:technologies)
     @contact = Contact.new(params[:contact])
   end
