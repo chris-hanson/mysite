@@ -6,6 +6,6 @@ module SetTitle
   end
 
   def set_title
-    @page_title = "Chris Hanson | My Portfolio Website"
+    @page_title = "Chris Hanson"
   end
 end
