@@ -4,7 +4,7 @@
     <span>Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</span>
   </header>
 
-  <p><%= truncate(blog.body, length: 250).html_safe %></p>
+  <p><%= truncate(blog.body.html_safe, length: 300, escape: false) %></p>
 
   <%= link_to "Continue reading <i class='fa fa-angle-double-right'></i>".html_safe, blog %>
 

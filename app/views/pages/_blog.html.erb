@@ -5,7 +5,7 @@
 
   <small><%= time_ago_in_words(blog.updated_at) %> ago in <%= blog.topic.title %></small>
 
-  <p><%= truncate(blog.body, length: 300) %></p>
+  <p><%= truncate(blog.body.html_safe, length: 300, escape: false) %></p>
 
   <%= link_to 'Continue reading <i class="fa fa-angle-double-right"></i>'.html_safe, blog %>
 </div>
